@@ -1,3 +1,6 @@
+html {
+  height: 100%;
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -9,7 +12,11 @@ body {
     rgba(83, 170, 241, 0.995) 45%,
     rgb(34, 224, 91) 55%
   );
-  height: 713px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 button.btn-1 {
   border: none;
@@ -51,11 +58,22 @@ button.btn-1 {
   border-radius: 7px;
   /* box-shadow: 4px 4px 8px rgb(212, 211, 211); */
 }
-.register-img {
+.register-img,
+.login-img {
   max-width: 100%;
-  height: auto;
 }
 
+#login-a,
+#register-a,
+#forgot-pass {
+  text-decoration: none;
+}
+a:link {
+  color: blue;
+}
+a:hover {
+  color: green;
+}
 .logo-img {
   width: 80px;
   height: 80px;
@@ -63,7 +81,7 @@ button.btn-1 {
 
 .logo-txt {
   background-color: #f3ec78;
-  background-image: linear-gradient(180deg, #0af531, #2888c9);
+  background-image: linear-gradient(180deg, #18d137, #2888c9);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
