@@ -191,3 +191,15 @@ h4{
   color: #18d137;
   margin-right: 15px;
 }
+/* Footer Area */ 
+.full-footer{
+	background-color: rgb(255, 255, 255);
+	color:black;
+
+}
+.embed-responsive{
+	height: 100px;
+}
+
+
+/* End Footer */ 
