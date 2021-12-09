@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrape css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Fontawesome  css-->
+     <link rel="stylesheet" href="css/all.min.css">
+     <!--Fontawesome  css-->
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+<title></title>
+</head>
+<body>
+    <!--- top navbar-->
+    <nav class="navbar navbar-dark fixed-top bg-info flex-md-nowrap p-0 shadow">
+        <a href="home.html" class="navbar-brand col-sm-3 col-md-2">Heal</a>
+    </nav>
+     <!--- end  navbar-->
+
+     
+     <div class="container-fluid mt-5">
+         <div class="row">
+             <nav class="col-sm-2 bg-light sidebar py-3"><!--side bar--->
+                 <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                         <li class="nav-item"><a class="nav-link active" href="#profiles"><i class="fas fa-briefcase-medical mr-2"></i>Doctor'sProfile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#appointments"><i class="fas fa-calender-check mr-2"></i>Appointments</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#view"><i class="fas fa-eye mr-2"></i>View Patient</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-sign-out-alt mr-2"></i>Logout</a></li>
+                   </ul>
+                </div>
+
+             </nav><!--end side bar--->
+
+             <div class="col-sm-6 mt-5"><!--profile area--->
+                 <form class="profiles mx-5" action="javascript:void(0)" onsubmit="updateDoctor()">
+                    <h2>Your Profile</h2>
+                    <div class="form-row">
+                        <div class="col">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name" disabled>
+                        </div>
+                        <div class="col">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter email" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                      </div>
+                    <div class="form-group">
+                      <label for="address">Hospital</label>
+                      <input type="text" id="address" name="address" class="form-control"  placeholder="Enter your Instiute">
+                    </div>
+                    <div class="form-group">
+                      <label for="spe">Specialization</label>
+                      <input type="text" id="spe" name="spe" class="form-control"  placeholder="Enter your specialization">
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone number</label>
+                      <input type="tel" id="phone" name="phone" class="form-control"  placeholder="Enter Phone number">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                  </form>
+                 
+                 
+                 <form class="Schedules mx-5" action="javascript:void(0)" onsubmit="updateDoctorSchedule()">
+                        <br>
+                        <br>
+                        <h2>Your Schedule</h2>
+                        <br>
+                    <div class="form-group">
+                            <input type="checkbox" id="available" name="available" value="Bike">
+                            <label for="available">Are you available</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="weekdays">Working Week Days</label>
+                        <select id="weekdays" data-placeholder="chose your working days" multiple class="chosen-select" name="weekdays">
+                            <option value=""></option>
+                            <option >Sunday</option>
+                            <option>Monday</option>
+                            <option>Tuesday</option>
+                            <option>Wednesday</option>
+                            <option>Thursday</option>
+                            <option>Friday</option>
+                            <option>Saturday</option>
+                        </select>
+                      </div>
+                    <div class="form-group">
+                      <label for="stime">Start time</label>
+                      <input type="time" id="stime" name="stime">
+                    </div>
+                    <div class="form-group">
+                      <label for="etime">End time</label>
+                      <input type="time" id="etime" name="etime">
+                    </div>
+                    <div class="form-group">
+                      <label>Your Fees</label>
+                      <input type="number" class="form-control"  placeholder="Enter your fees">
+                    </div>
+                    <div class="form-group">
+                      <label>Seats</label>
+                      <input type="number" class="form-control"  placeholder="Enter Seats per day">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <br>
+                    <br>
+                    <br>
+                  </form>
+             </div><!--end profile--->
+
+         </div>
+     </div>
+
+    <!--- end sidebar-->
+    <script>
+        $(".chosen-select").chosen({
+            no_results_text: "Oops, nothing found!"
+          });
+    </script>
+
+    <script src="jsscript/dashboard.js"></script>
+
+
+       <!-- bootstrape jss-->
+       <script src="js/jquery.min.js"></script>
+       <script src="js/popper.min.js"></script>
+       <script src="js/bootstrap.min.js"></script>
+       <script src="js/all.min.js"></script>
+</body>
+</html>
